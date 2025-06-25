@@ -43,7 +43,7 @@ async def get_jobs(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     category = category.replace(" ", "%20")
-    url = f"https://remotive.io/api/remote-jobs?category={category}"
+    url = f"https://services.india.gov.in/feed/rss?cat_id=2&ln=en"
     response = requests.get(url)
 
     if response.status_code != 200:
